@@ -1,0 +1,781 @@
+{
+	"info": {
+		"_postman_id": "bea09651-b682-4f9b-b926-a022ba406b33",
+		"name": "Loves One",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client API Collection",
+			"item": [
+				{
+					"name": "Authication",
+					"item": [
+						{
+							"name": "Login API",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "fcm_token",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sign Up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Test",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "test1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "23454321234",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "test1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "fcm_token",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/forgot-password-request",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"forgot-password-request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Password OTP Verify",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "otp_code",
+											"value": "247512",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/reset-pass-otp-verified",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"reset-pass-otp-verified"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Password ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "Mg==",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "test1@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/reset-password-request",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"reset-password-request"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Memorial Profile",
+					"item": [
+						{
+							"name": "Get My Memorial Profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api_token",
+										"value": "ecsydtdg37a3ru9rJ3Rlc3RAZ21haWwuY29tJw==",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3006/api/v1/get-my-memorial-profiles?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"get-my-memorial-profiles"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Memorial Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "New",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "User",
+											"type": "text"
+										},
+										{
+											"key": "birth_date",
+											"value": "12-02-1997",
+											"type": "text"
+										},
+										{
+											"key": "death_date",
+											"value": "12-02-1997",
+											"type": "text"
+										},
+										{
+											"key": "cemetery_country",
+											"value": "US",
+											"type": "text"
+										},
+										{
+											"key": "cemetery_state",
+											"value": "TX",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"type": "file",
+											"src": "/home/haziq/Desktop/loves_project_screenshots/Screenshot from 2022-10-27 01-33-07.png"
+										},
+										{
+											"key": "relation",
+											"value": "Dad",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/add-memorial-profile?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"add-memorial-profile"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Memorail Profile Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "memorial_id",
+											"value": "26",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/get-memorial-profile-detail?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"get-memorial-profile-detail"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Memorial Profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "New",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "new",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/search-memorial-profile?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"search-memorial-profile"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Services",
+					"item": [
+						{
+							"name": "Get All Services",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3006/api/v1/get-all-services?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"get-all-services"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Service Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "service_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/get-service-detail?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"get-service-detail"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Service Admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "key=",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "New Service",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "300",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/home/haziq/Pictures/Screenshot from 2020-01-24 00-55-11.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/admin/services/add-service",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"admin",
+										"services",
+										"add-service"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "Get Orders",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3006/api/v1/order-listing?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"order-listing"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Order Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/order-detail?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"order-detail"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Events",
+					"item": [
+						{
+							"name": "Create Event Admin",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Test",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/haziq/Pictures/Screenshot from 2020-05-28 23-10-23.png"
+										},
+										{
+											"key": "description",
+											"value": "New Event",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2018-10-17T13:34:00.000",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2018-10-18T13:34:00.000",
+											"type": "text"
+										},
+										{
+											"key": "created_by",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/admin/events/create-event",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"admin",
+										"events",
+										"create-event"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Events",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3006/api/v1/get-all-event?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"get-all-event"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Event Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "event_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/api/v1/get-all-event?api_token=iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw==",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"api",
+										"v1",
+										"get-all-event"
+									],
+									"query": [
+										{
+											"key": "api_token",
+											"value": "iqd6lb1yreopt4wsJ3Rlc3RAZ21haWwuY29tJw=="
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin API Collection",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@domain.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3006/admin/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3006",
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
